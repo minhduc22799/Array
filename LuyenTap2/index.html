@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 1</h1>
+<button type="button" onclick="bai1()">Bài 1</button>
+
+<h1>Bài 2</h1>
+<button type="button" onclick="bai2()">Bài 2</button>
+
+<h1>Bài 3</h1>
+<button type="button" onclick="bai3()">Bài 3</button>
+
+<h1>Bài 4</h1>
+<button type="button" onclick="bai4()">Bài 3</button>
+
+<h1>Bài 5</h1>
+<button type="button" onclick="bai5()">Bài 3</button>
+
+<h1>Bài 6</h1>
+<button type="button" onclick="bai6()">Bài 6</button>
+
+
+
+</body>
+<script>
+    function bai1(){
+        let a = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ];
+        for (let i = 0; i<a.length;i++){
+            document.write("<br/>"+"row " + i +"<br/>")
+            for (let j = 0; j<a[i].length;j++){
+                document.write("<br/>" + a[i][j]+"<br/>");
+            }
+        }
+    }
+    function bai2() {
+            let array = ["c",2,3,"c",4,5,"a"]
+        array.reverse();
+        for (let i = 0; i < array.length ; i++) {
+                document.write(array[i]);
+        }
+    }
+
+    function bai3(){
+        let array = ["ư","z","x","s","p",3];
+        let  count = 0
+        for (let i = 0; i <array.length ; i++) {
+                if (typeof array[i] == 'string'){
+                        count++;
+                        document.write(array[i])
+                }
+
+        }
+        document.write("<br/>"+"Mảng có "+count+" kí tự")
+    }
+
+    function bai4() {
+        let s = "day la bai 4";
+       document.write( s.split(" ").length);
+    }
+
+    function bai5(){
+        let a = prompt("nhap chuoi thu 1");
+        let b = prompt("nhap chuoi thu 2");
+        if (a.localeCompare(b) == 0){
+            alert("2 chuoi giong nhau")
+        }else {
+            alert("2 chuoi khong giong nhau")
+        }
+
+    }
+
+    function bai6(){
+        let input = prompt("Nhập chuỗi");
+        let input2 =  input.replaceAll("-","_");
+        document.write(input2)
+
+    }
+
+</script>
+</html>
